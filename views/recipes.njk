@@ -2,15 +2,16 @@
 
 {% block content %}
     <section class="cards">
-    {% for receita in receitas %}
+    {% for recipe in recipes %}
       <div class="card">
-        <a href="/recipe/{{receita.id}}">
-          <img src="{{receita.image}}">
-          <div class="description">
-            <h3>{{receita.title}}</h3>
-            <p>por {{receita.author}}</p>
+        <a href="/recipe/{{recipe.id}}">
+          <img src="{{recipe.image}}">
+          <div class="description horizontal-desc">
+            <h3>{{recipe.title}}</h3>
+            <p>por {{recipe.author}}</p>
           </div>
         </a>
       </div>
     {% endfor %}
+    </section>
 {% endblock %}

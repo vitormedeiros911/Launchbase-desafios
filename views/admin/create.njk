@@ -1,0 +1,13 @@
+{% extends "admin/layout.njk" %}
+
+{% block content %}
+  <h3 class="title">Criando Receita</h3>
+  <form method="POST" action="/admin/recipes">
+      {% include 'admin/fields.njk' %}
+      <input type="hidden" name="id" value="{{recipe.id}}">
+  </form>
+{% endblock content %}
+
+{% block script %}
+  <script src="js/addItem.js"></script>
+{% endblock %}

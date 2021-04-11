@@ -12,6 +12,10 @@ header {
   padding: 36px 380px 36px 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 header img {
   float: left;
 }
@@ -25,7 +29,6 @@ header img {
   font-size: 16px;
   line-height: 22px;
   margin: 0 18px;
-  text-decoration: none;
   font-weight: bold;
 }
 
@@ -64,7 +67,8 @@ header img {
 }
 
 .subtitle {
-  margin: 50px 0px 5px 0px;
+  margin: 40px 0px 5px 0px;
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 .cards {
@@ -85,12 +89,9 @@ header img {
   border-radius: 15px;
 }
 
-.card a {
-  text-decoration: none;
-}
-
 .card .description {
   margin-top: 20px;
+  min-width: 300px;
 }
 
 .card .description h3 {
@@ -138,7 +139,9 @@ footer p {
 }
 
 .recipe-banner {
-  border-radius: 29px;
+  border-radius: 20px;
+  width: 100%;
+  height: 280px;
 }
 
 p.title {
@@ -156,7 +159,7 @@ p.title {
   color: #999999;
   cursor: pointer;
   display: block;
-  margin-left: 8px
+  margin-left: 8px;
 }
 
 p.recipe-subtitle {
@@ -183,8 +186,13 @@ p.recipe-text {
   line-height: 28px;
 }
 
-li.ingredient {
+li.ingredient,
+li.item-list {
   font-family: "Roboto-regular", sans-serif;
   color: #444444;
   padding: 2px;
+}
+
+.logo {
+  padding-left: 200px;
 }

@@ -1,0 +1,66 @@
+<div class="items">
+  <h3 class="subtitle">Imagem da receita</h3>
+  <div>
+      <input type="url" name="image" placeholder="http://" value="{{recipe.image}}">
+  </div>
+</div>
+
+<div class="items">
+  <h3 class="subtitle">Autor</h3>
+  <div>
+      <input type="text" name="author" placeholder="Digite o Nome do autor" value="{{recipe.author}}">
+  </div>
+</div>
+
+<div class="items">
+  <h3 class="subtitle">Título da receita</h3>
+  <div>
+      <input type="text" name="title" placeholder="Digite o título da receita" value="{{recipe.title}}">
+  </div>
+</div>
+
+
+<div class="items">
+  <h3 class="subtitle">Ingredientes</h3>
+  <div id="ingredients">
+    {% if recipe.id %}
+      {% for ingredient in recipe.ingredients %}
+        <div class="ingredient">
+          <input type="text" name="ingredients[]" value="{{ingredient}}" placeholder="Digite um Ingrediente" />
+        </div>
+      {% endfor %}
+      {% else %}
+        <div class="ingredient">
+          <input type="text" name="ingredients[]" value="{{recipe.ingredient}}" placeholder="Digite um Ingrediente" />
+        </div>
+    {% endif %}
+  </div>
+    <button type="button" class="add-item" id="add-ingredient">Adicionar Novo Ingrediente</button>
+</div>
+
+<div class="items">
+  <h3 class="subtitle">Modo de preparo</h3>
+  <div id="preparations">
+    {% if recipe.id and recipe.preparations %}
+      {% for preparation in recipe.preparations %}
+        <div class="preparation">
+          <input type="text" name="preparations[]" value="{{preparation}}" placeholder="Digite um Modo de Preparação" />
+        </div>
+      {% endfor %}
+      {% else %}
+        <div class="preparation">
+          <input type="text" name="preparations[]" value="{{recipe.preparations}}" placeholder="Digite um Modo de Preparação" />
+        </div>
+    {% endif %}
+  </div>
+    <button type="button" class="add-item" id="add-prepare-mode">Adicionar Novo Modo de preparação</button>
+</div>
+
+<div class="items">
+  <h3 class="subtitle">Informações adicionais</h3>
+  <div>
+      <textarea name="information">{{recipe.information}}</textarea>
+  </div>
+</div>
+
+<button type="submit" class="button btn-save">Salvar receita</button>

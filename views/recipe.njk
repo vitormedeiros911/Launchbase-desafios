@@ -2,27 +2,27 @@
 
 {% block content %}
    <section>
-      <img src="{{receita.image}}" alt="{{receita.title}}" class="recipe-banner" />
-      <p class="title">{{receita.title}}</p>
-      <p class="author">por {{receita.author}}</p>
+      <img src="{{recipe.image}}" alt="{{recipe.title}}" class="recipe-banner" />
+      <p class="title">{{recipe.title}}</p>
+      <p class="author">por {{recipe.author}}</p>
 
       <p class="recipe-subtitle">Ingredientes <span id="hide-ingredients" class="hide">ESCONDER</span></p>
       <p  class="recipe-text">
         <ul id="ingredients" style="display: block">
-            {% for ingredient in receita.ingredients %}
+            {% for ingredient in recipe.ingredients %}
                     <li class="ingredient"> {{ingredient}} </li>
             {% endfor %}
         </ul>
       </p>
 
       <p class="recipe-subtitle">Modo de preparo <span id="hide-prepare-mode" class="hide">ESCONDER</span></p>
-      <p id="prep" class="recipe-text">{{receita.preparation}}</p>
+      <p id="prep" class="recipe-text">{{recipe.preparations}}</p>
 
       <p class="recipe-subtitle">Informações adicionais <span id="hide-info" class="hide">ESCONDER</span></p>
-      <p id="info" class="recipe-text">{{receita.information}}</p>
+      <p id="info" class="recipe-text">{{recipe.information}}</p>
     </section>
 {% endblock %}
 
 {% block script %}
-  <script src="scripts.js"></script>
+  <script src="/js/hideText.js"></script>
 {% endblock %}

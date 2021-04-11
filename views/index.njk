@@ -12,13 +12,13 @@
     <h2 class="subtitle">6 primeiras receitas</h2>
 
     <section class="cards">
-      {% for receita in receitas %}
-        {% if receita.id <=6  %}
+      {% for recipe in recipes %}
+        {% if recipe.id <=6  %}
           <div class="card">
-            <img src="{{receita.image}}">
+            <img src="{{recipe.image}}">
             <div class="description">
-              <h3>{{receita.title}}</h3>
-              <p>por {{receita.author}}</p>
+              <h3>{{recipe.title}}</h3>
+              <p>por {{recipe.author}}</p>
             </div>
           </div>
         {% endif %}

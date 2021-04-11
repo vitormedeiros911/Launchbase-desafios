@@ -1,0 +1,99 @@
+.admin-wrapper {
+  margin: 50px 200px 100px 200px;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.admin-cards {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 150px;
+}
+
+.card .card-img {
+  min-width: 172px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.horizontal .description {
+  margin-left: 20px;
+}
+
+.description a {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 14px;
+  color: #6558c3;
+}
+
+.title {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 24px;
+  color: #111111;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 29px;
+  justify-content: space-between;
+}
+
+.button,
+.button-rd {
+  font-family: "Roboto Bold", sans-serif;
+  border-radius: 4px;
+  color: white;
+}
+
+.button {
+  background: #6558c3;
+  width: 136px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-rd {
+  background: #dc4747;
+  width: 92px;
+  height: 37px;
+}
+
+.btn-save {
+  margin-top: 15px;
+  float: right;
+}
+
+.items input,
+.items textarea {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
+  color: #111111;
+  line-height: 24px;
+  padding: 15px 20px;
+  margin-top: 10px;
+  width: 96%;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.items textarea {
+  min-height: 257px;
+  resize: vertical;
+}
+
+.add-item {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 16px;
+  color: #6558c3;
+  text-align: right;
+  background: white;
+  margin-top: 15px;
+}
